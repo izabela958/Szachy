@@ -5,9 +5,7 @@ import java.awt.event.ActionListener;
 
 import static com.sun.glass.ui.Cursor.setVisible;
 
-/**
- * Created by dominikolczyk on 12.04.2016.
- */
+
 public class MenuForm extends JFrame{
 	private JButton dupaButton;
 	private JPanel root;
@@ -22,6 +20,13 @@ public class MenuForm extends JFrame{
 		setContentPane(root);
 		pack();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		GRAZKOMPUTEREMButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				opcjeCzasu o = new opcjeCzasu();
+			}
+		});
+
 		setVisible(true);
 	}
 
